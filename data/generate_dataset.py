@@ -1,4 +1,4 @@
-import numpy as np
+﻿import numpy as np
 import pandas as pd
 from scipy.stats import truncnorm, skewnorm
 from scipy.special import expit
@@ -178,3 +178,10 @@ if __name__ == "__main__":
     output_file = "diabetes_risk_india_2026_rebuilt.csv"
     df.to_csv(output_file, index=False)
     print(f"Dataset saved to {output_file}")
+
+# Future considerations
+# - Use a stratified train/test split and leakage-safe preprocessing pipeline.
+# - Compare model families and metric choices beyond accuracy, including macro-F1 and recall byclass.
+# - Explore feature engineering based on BMI, HbA1c, fasting blood sugar, and interaction terms.
+# - Reassess imputation and scaling for lifestyle variables with non-random missingness.
+# - Validate fairness, explainability, and external data quality before any deployment-oriented use.
